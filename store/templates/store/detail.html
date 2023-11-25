@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h2>{{ pro.name }}</h2>
+<img src="{{ pro.thumbnail.url }}" alt={{ product.name }} style="max-width:250px;">
+<p>{{ pro.prix }}</p>
+<p>{{ pro.stock </p>
+
+{% endblock %}
+
+
+
+
