@@ -9,5 +9,5 @@ from shop import settings
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
-    path('product/<str:slug>/', detail_produit),
+    path('product/<str:slug>/', detail_produit, name="detail"),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

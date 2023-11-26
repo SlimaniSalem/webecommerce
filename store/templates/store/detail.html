@@ -2,10 +2,11 @@
 
 
 {% block content %}
+
+<img src="{{ pro.thumbnail.url }}" alt={{ product.name}} style="max-width:250px;">
 <h2>{{ pro.name }}</h2>
-<img src="{{ pro.thumbnail.url }}" alt={{ product.name }} style="max-width:250px;">
-<p>{{ pro.prix }}</p>
-<p>{{ pro.stock </p>
+<p>{{ pro.prix }} €</p>
+
 
 {% endblock %}
 
