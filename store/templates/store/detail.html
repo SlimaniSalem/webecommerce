@@ -2,7 +2,9 @@
 
 
 {% block content %}
-
+<a href="{% url 'index' %}">
+<h1> home </h1>
+</a>
 <img src="{{ pro.thumbnail.url }}" alt={{ product.name}} style="max-width:250px;">
 <h2>{{ pro.name }}</h2>
 <p>{{ pro.prix }} €</p>

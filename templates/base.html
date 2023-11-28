@@ -5,15 +5,16 @@
     <title>boutique de docstring</title>
 </head>
 <body>
-<a href="{% url 'index' %}">
-<h1>La Boutique de salem</h1>
-</a>
 
 {% if not user.is_authenticated %}
+
+
 <a href="{% url 'user' %} ">S'inscrire</a>
+
 {% endif %}
 
 {% block content %}
+
 {% endblock %}
 
 </body>
