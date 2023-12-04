@@ -18,15 +18,15 @@ def user_log(request):
 
     return render(request,'inscription.html')
 
-def login(request):
+def logine(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
-        user = authenticate(username=username,password=password)
+        user = authenticate(username=username, password=password)
         if user:
             login(request, user)
             return redirect('index')
-    return render(request, 'inscription.html')
+    return render(request, 'connexion.html')
 
 def user_dec(request):
    logout(request)
