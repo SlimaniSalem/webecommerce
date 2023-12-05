@@ -9,9 +9,12 @@
 <h2>{{ pro.name }}</h2>
 <p>{{ pro.prix }} €</p>
 <p>{{ pro.desc }} </p>
-
+{%  if user.is_authenticated %}
+  <P>
+<a href="{% url 'arit' %} ">Ajouter au pannier</a>
+    </P>
+{% endif %}
 {% endblock %}
-
 
 
 

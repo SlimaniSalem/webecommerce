@@ -27,3 +27,13 @@ class article(models.Model):
 
     def __str__(self):
         return f"{self.produit.name}({self.Qte})"
+
+
+class pannier(models.Model):
+    user = models.OneToOneField(AUTH_USER_MODEL, on_delete=models.CASCADE)
+    article = models.ManyToManyField(article)
+    date_commande = models.DateTimeField
+    ordred = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.user.username
