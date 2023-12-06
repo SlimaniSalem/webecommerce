@@ -16,11 +16,11 @@ class product(models.Model):
         return (f"{self.name}")
 
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'slug':self.slug})
+        return reverse('detail', kwargs={'slug': self.slug})
 
 
 class article(models.Model):
-    utilisateur = models.ForeignKey(AUTH_USER_MODEL,on_delete=models.CASCADE)
+    utilisateur = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
     produit = models.ForeignKey(product, on_delete=models.CASCADE)
     Qte = models.IntegerField(default=1)
     order = models.BooleanField(default=True)
