@@ -1,0 +1,3 @@
+[submodule "webecommerce"]
+    path = webecommerce
+    url = <URL_du_sous_module>
