@@ -22,13 +22,19 @@ def detail_article(request, slug):
 
     # Vérifiez si l'article existe dans le panier
     order, created = article.objects.get_or_create(utilisateur=user, produit=prod, order=False)
-
-    if created:
-        pan.article.add(order)
-    else:
+    if produit.stock > 0:
+      if created:
+           pan.article.add(order)
+      else:
         order.Qte += 1
         order.save()
         produit.stock -= 1
         produit.save()
+      return redirect(reverse("detail", kwargs={"slug": slug}))
 
-    return redirect(reverse("detail", kwargs={"slug": slug}))
+    else:
+        return redirect(reverse("index"))
+
+def affiche_pannier(request):
+    pan=get_object_or_404(pannier, user=request.user)
+    return render("store/Article.html", context={"pan":pannier.article})
