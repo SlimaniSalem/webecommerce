@@ -1,10 +1,11 @@
 {% extends 'base.html'%}
-
+{% load static %}
 {% block content %}
-{% for pann in pan  %}
+<h1>hello</h1>
+{% for pannier in pan  %}
 
-<h2>{{ pannier.user }}</h2>
-<p>{{ pannier.article }} €</p>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
+<p>{{ article.product.name }} </p>
 
 {% endfor %}
 

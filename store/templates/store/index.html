@@ -6,7 +6,9 @@
 {%  if user.is_authenticated %}
 
   {{ user.username }} <a href="{% url 'deco' %} ">Déconnecter</a>
-
+   <p>
+  <a href="{% url 'affich_pann' %} ">voir mon pannier</a>
+   </p>
 {% else %}
 <a href="{% url 'user1' %} ">s'inscrire</a>
 <a href="{% url 'connecter1' %}">Connexion</a>
@@ -19,9 +21,7 @@
 
 {% endfor %}
 
-<p>
-  <a href="{% url 'affich_pann' %} ">voir mon pannier</a>
-</p>
+
 
 
 {% endblock %}

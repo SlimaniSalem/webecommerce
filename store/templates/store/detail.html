@@ -1,17 +1,21 @@
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <a href="{% url 'index' %}">
 <h1> home </h1>
 </a>
+<p class="salem">ffffffffffff</p>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
+
 <img src="{{ pro.thumbnail.url }}" alt={{ product.name}} style="max-width:250px;">
 <h2>{{ pro.name }}</h2>
 <p>{{ pro.prix }} €</p>
 <p>{{ pro.desc }} </p>
 {%  if user.is_authenticated %}
     <P>
-        <a href="{% url 'arit' pro.slug %}">Ajouter au pannier</a>
+        <a href="{% url 'arit' pro.slug %}"> Ajouter au pannier</a>
     </P>
 {% endif %}
 {% endblock %}

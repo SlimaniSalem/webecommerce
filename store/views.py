@@ -36,5 +36,5 @@ def detail_article(request, slug):
         return redirect(reverse("index"))
 
 def affiche_pannier(request):
-    pan=get_object_or_404(pannier, user=request.user)
-    return render("store/Article.html", context={"pan":pannier.article})
+    pan = get_object_or_404(pannier, user=request.user)
+    return render(request, "store/Article.html", context={"pan": pan.article.all()})
