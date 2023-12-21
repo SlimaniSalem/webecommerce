@@ -18,7 +18,7 @@ def detail_article(request, slug):
     user = request.user
     prod = get_object_or_404(product, slug=slug)
     pan, _ = pannier.objects.get_or_create(user=user)
-    produit=get_object_or_404(product, slug=slug)
+    produit = get_object_or_404(product, slug=slug)
 
     # Vérifiez si l'article existe dans le panier
     order, created = article.objects.get_or_create(utilisateur=user, produit=prod, order=False)

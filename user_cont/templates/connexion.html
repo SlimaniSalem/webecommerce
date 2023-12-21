@@ -1,18 +1,32 @@
 {% extends 'base.html'%}
-
+{% load static %}
 {% block content %}
-<h1>Acceder a votre espace sur notre boutique</h1>
-<form method="POST">
-    {% csrf_token %}
-    <p>
-        <label for="username">user Name</label>
-        <input id="username" type="text" name="username">
-    </p>
-    <p>
-        <label for="password">Password</label>
-        <input id="Password" type="text" name="password">
-    </p>
-    <button type="submit">connexion</button>
-</form>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
 
+<div class="wrapper">
+    <form method="POST" class="login-form">
+        {% csrf_token %}
+        <h1 class="logo">Member Logins</h1>
+        <div class="input-box">
+            <input id="username" type="text" name="username" placeholder="username" class="username-input">
+            <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="input-box">
+            <input id="Password" type="text" name="password" placeholder="password" class="password-input">
+            <i class='bx bxs-key'></i>
+        </div>
+
+        <div class="remember-forget">
+            <label><input type="checkbox" class="remember-checkbox">enregistré</label>
+            <a href="#" class="forgot-password-link"> Mot de passe oublier</a>
+        </div>
+
+        <button type="submit" class="login-button">connexion</button>
+        <div>
+            <p>j'ai pas de compte <a href="#" class="signup-link">S'inscrire</a></p>
+        </div>
+    </form>
+</div>
 {% endblock %}

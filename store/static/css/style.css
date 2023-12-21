@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-title {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+.wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+}
+
+.username-input,
+.password-input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.remember-forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.login-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.username-input {
+    flex:1/* Take up remaining space in the container */
+    margin-right: 20px; /* Add spacing between input and icon */
+}
+
+.bxs-user {
+    font-size: 20px; /* Adjust the icon size as needed */
+    margin-right: 5px; /* Add spacing between icon and input */
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+.forgot-password-link,
+.signup-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.forgot-password-link:hover,
+.signup-link:hover {
+text-decoration: underline;
+}
+.logo{
+font-size:20px;
+text-align: center;
+}

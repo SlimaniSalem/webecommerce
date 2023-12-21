@@ -3,11 +3,13 @@
 {% load static %}
 
 {% block content %}
-<a href="{% url 'index' %}">
+<button>
+    <a href="{% url 'index' %}">
 <h1> home </h1>
-</a>
+    </a>
+    </button>
 <p class="salem">ffffffffffff</p>
-<link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
+
 
 <img src="{{ pro.thumbnail.url }}" alt={{ product.name}} style="max-width:250px;">
 <h2>{{ pro.name }}</h2>
