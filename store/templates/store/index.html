@@ -1,31 +1,30 @@
 
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/index.css' %}">
+    {% if user.is_authenticated %}
+        <div class="user-info">
+            Bonjour, <span id="username">{{ user.username }}</span> <a href="{% url 'deco' %}" id="logout-link">Déconnecter</a>
+        </div>
+        <p><a href="{% url 'affich_pann' %}" class="panier-link">Voir mon panier</a></p>
+    {% else %}
+        <button><a href="{% url 'user1' %}" class="signup-link">S'inscrire</a></button>
+        <button><a href="{% url 'connecter1' %}" class="login-link">Connexion</a></button>
+    {% endif %}
 
-{%  if user.is_authenticated %}
-
-  {{ user.username }} <a href="{% url 'deco' %} ">Déconnecter</a>
-   <p>
-  <a href="{% url 'affich_pann' %} ">voir mon pannier</a>
-   </p>
-{% else %}
-
-<button><a href="{% url 'user1' %} ">s'inscrire</a></button>
-<button><a href="{% url 'connecter1' %}">Connexion</a></button>
-
-{% endif %}
-{% for product in prod%}
-
-<a href="{{ product.get_absolute_url }}"><h2>{{ product.name }}</h2></a>
-<img src="{{ product.thumbnail.url }}" alt = {{ product.name }} style="max-width:250px;">
-
-{% endfor %}
-
-
-
-
+    {% for product in prod %}
+        <div class="product-container">
+            <a href="{{ product.get_absolute_url }}"><h2 class="product-title">{{ product.name }}</h2></a>
+            <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" class="product-image">
+        </div>
+    {% endfor %}
 {% endblock %}
+
+
+
+
+
 
 
 

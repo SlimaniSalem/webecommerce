@@ -9,17 +9,17 @@
         {% csrf_token %}
         <h1 class="logo">Member Logins</h1>
         <div class="input-box">
+
             <input id="username" type="text" name="username" placeholder="username" class="username-input">
-            <i class='bx bxs-user'></i>
         </div>
 
         <div class="input-box">
+
             <input id="Password" type="text" name="password" placeholder="password" class="password-input">
-            <i class='bx bxs-key'></i>
         </div>
 
         <div class="remember-forget">
-            <label><input type="checkbox" class="remember-checkbox">enregistré</label>
+            <label><input type="checkbox" class="remember-checkbox">enregistré </label>
             <a href="#" class="forgot-password-link"> Mot de passe oublier</a>
         </div>
 
@@ -27,6 +27,7 @@
         <div>
             <p>j'ai pas de compte <a href="#" class="signup-link">S'inscrire</a></p>
         </div>
+
     </form>
 </div>
 {% endblock %}

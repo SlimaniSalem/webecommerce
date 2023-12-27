@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: black;
+    background-color: #1C2833;
     margin: 0;
     padding: 0;
     display: flex;
@@ -49,17 +49,24 @@ label {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+
 }
 
 .remember-forget {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.remember-checkbox {
+    margin-right: 2px; /* Ajouter une marge à droite du checkbox */
+}
+
+.forgot-password-link {
+    margin-left: 10px; /* Ajouter une marge à gauche du lien "Mot de passe oublié" */
 }
 
 .login-button {
-    background-color: #4caf50;
+    background-color: #1C2833;
     color: #fff;
     padding: 10px;
     border: none;
@@ -70,6 +77,7 @@ label {
 .username-input {
     flex:1/* Take up remaining space in the container */
     margin-right: 20px; /* Add spacing between input and icon */
+    resize: none;
 }
 
 .bxs-user {
