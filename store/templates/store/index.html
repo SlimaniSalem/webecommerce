@@ -9,8 +9,10 @@
         </div>
         <p><a href="{% url 'affich_pann' %}" class="panier-link">Voir mon panier</a></p>
     {% else %}
-        <button><a href="{% url 'user1' %}" class="signup-link">S'inscrire</a></button>
+ <nav class="navbar">
+
         <button><a href="{% url 'connecter1' %}" class="login-link">Connexion</a></button>
+</nav>
     {% endif %}
 
     {% for product in prod %}

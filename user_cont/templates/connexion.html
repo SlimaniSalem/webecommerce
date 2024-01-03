@@ -3,7 +3,9 @@
 {% block content %}
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
-
+<div class="boutique">
+    <h1>Votre passage secret vers des offres exceptionnelles - Connectez-vous maintenant</h1>
+</div>
 <div class="wrapper">
     <form method="POST" class="login-form">
         {% csrf_token %}
@@ -25,7 +27,7 @@
 
         <button type="submit" class="login-button">connexion</button>
         <div>
-            <p>j'ai pas de compte <a href="#" class="signup-link">S'inscrire</a></p>
+            <p>j'ai pas de compte <a href="{% url 'user1'  %}" class="signup-link">S'inscrire</a></p>
         </div>
 
     </form>

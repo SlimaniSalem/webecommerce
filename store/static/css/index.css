@@ -1,0 +1,70 @@
+/* CSS/index.css */
+
+body {
+    background-color: #1a1a1a; /* Couleur de fond sombre */
+    color: #1a1a1a;; /* Couleur du texte clair */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.user-info {
+    margin: 10px;
+}
+
+#username {
+    color: #66ccff; /* Couleur du nom d'utilisateur */
+}
+
+#logout-link, .panier-link, .signup-link, .login-link {
+    color: #66ccff; /* Couleur des liens */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.product-container {
+    background-color: #2c2c2c; /* Couleur de fond du conteneur de produit */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-title {
+    color: #66ccff; /* Couleur du titre du produit */
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+.button {
+    float: left;
+    background-color: #fff;
+    color: #1a1a1a;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+
+}
+.navbar{
+border-radius: 5px;
+background-color: #2c2c2c;
+margin: 10px;
+
+}
+
+
+/* Media query pour rendre le site réactif (à adapter selon les besoins) */
+@media screen and (max-width: 600px) {
+    .product-container {
+        width: 100%;
+    }
+}
